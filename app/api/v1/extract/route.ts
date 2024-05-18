@@ -10,7 +10,7 @@ const anthropic = new Anthropic({
 
 export async function POST(req: Request) {
   const res = await fetch(
-    "https://res.cloudinary.com/dh7z4ooeo/image/upload/v1712410677/ocr-temp/mhyxxdcywzmggcsly2y1.jpg"
+    "https://res.cloudinary.com/dh7z4ooeo/image/upload/v1712409752/ocr-temp/tynjr0y4n3yx6wxjtdbz.jpg"
   );
   const buffer = await res.arrayBuffer();
   const bytes = new Uint8Array(buffer);
@@ -37,9 +37,9 @@ export async function POST(req: Request) {
             type: "text",
             text: "Given an image that includes text, tables, and visual elements like mathematical formulas, your task is to extract all content accurately while preserving the original layout and reading order.\
           Ensure paragraph integrity is maintained without introducing extra line breaks.\
-          All tables, should be formatted in markdown to retain their structure fully.\
           Put small descriptions of images in brackets, when applicable.\
           The final output must be in plain text and include only the extracted information, with no added introductions, titles, descriptions, or extraneous characters.\
+          All tables, should be formatted in markdown format.\
           This approach ensures the fidelity of the original document's content and structure in the extraction process.",
           },
         ],
